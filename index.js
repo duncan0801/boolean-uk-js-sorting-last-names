@@ -55,9 +55,18 @@ console.log(`
 Your name is at the ${names.indexOf(yourName)} index position of the names array.`)
 
 //STEP 5
+const capatalisedNames = []
 console.log(`
 Here are the names UPPERCASED:`)
 for (const name of names) {
     console.log(name.toUpperCase())
+    capatalisedNames.push(name.toUpperCase())
 }
 
+
+//CHALLENGE
+const combinedArray = []
+for (const name of names) {
+    combinedArray.push([name, name.toUpperCase()])
+}
+console.log(combinedArray)
