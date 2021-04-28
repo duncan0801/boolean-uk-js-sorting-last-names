@@ -14,7 +14,7 @@ Tips
 - Remember to google docs if you don't know or remember certain details
 
 Challenge
-Let's take it a step further and group each sorted name with its upper-cased one in a sub-array, which in its turn will go inside another array to group it all together. 
+✔ Let's take it a step further and group each sorted name with its upper-cased one in a sub-array, which in its turn will go inside another array to group it all together. 
 
 It should look like this in your output:
 
