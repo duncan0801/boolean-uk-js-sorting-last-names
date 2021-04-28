@@ -3,11 +3,11 @@ Let's have some more practice with arrays! In this exercise we expect you to bec
 So we start with an array of last names, and from there you're going to perform a bunch of operations in it!
 
 Instructions
-- ✔ Create an array with the following names: Mason, Marcora, Rico, Neves, Ivanov
-- ✔ Have a prompt that adds your last name to the array
-- ✔ Have an output that has the names sorted alphabetically
-- ✔ Have an output that tells you what is the position of your name in the sorted array
-- Have an output that Uppercase's all names in the array
+1. ✔ Create an array with the following names: Mason, Marcora, Rico, Neves, Ivanov
+2. ✔ Have a prompt that adds your last name to the array
+3. ✔ Have an output that has the names sorted alphabetically
+4. ✔ Have an output that tells you what is the position of your name in the sorted array
+5. ✔ Have an output that Uppercase's all names in the array
 
 Tips
 - Try to keep track of your data, and when it is being changed
@@ -23,20 +23,41 @@ It should look like this in your output:
 Output the result to the console
 */
 
+//STEP 1
 const names = ["Mason", "Marcora", "Rico", "Neves", "Ivanov"]
-console.log(names)
+console.log(`
+Here is the list of names:`)
+for (const name of names) {
+    console.log(name)
+}                               
 
+//STEP 2
 let yourName = prompt(`What's your last name?`)
-
+yourName = yourName.charAt(0).toUpperCase() + yourName.slice(1)
 names.push(yourName)
-names.sort()
-
+console.log(`
+Here is the list of names wih your name added at the end:`)
 for (const name of names) {
     console.log(name)
 }
 
+
+//STEP 3
+names.sort()
+console.log(`
+Here are the names alphabetised:`)
+for (const name of names) {
+    console.log(name)
+}
+
+//STEP 4
+console.log(`
+Your name is at the ${names.indexOf(yourName)} index position of the names array.`)
+
+//STEP 5
+console.log(`
+Here are the names UPPERCASED:`)
 for (const name of names) {
     console.log(name.toUpperCase())
 }
 
-console.log(`Your name is at the ${names.indexOf(yourName)} position of the names array`)
